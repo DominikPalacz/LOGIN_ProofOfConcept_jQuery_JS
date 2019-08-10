@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --logo-hight: 80px;
+  --field-width-mobile: 100%;
+  --field-width: 500px;
+
+  --top-left-gradient: #0a64a4;
+  --top-right-gradient: #099;
+  --bottom-left-gradient: #00ac68;
+  --bottom-right-gradient: #00c322;
+}
+
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login .logo {
+  height: var(--logo-hight);
+}
+
+.login .login-section {
+  height: calc(100vh - var(--logo-hight));
+  display: flex;
+  flex-direction: column;
+}
+
+.login .login-section .login-section-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-image: linear-gradient(72deg, var(--top-left-gradient) 5%, var(--top-right-gradient) 95%);
+}
+
+.login .login-section .login-section-button {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: linear-gradient(72deg, #00ac68 5%, #00c322 95%);
+}
+
+.field {
+  max-width: var(--field-width-mobile);
+}
+
+.button {
+  height: 50px;
+  width: 250px;
+  margin: 30px auto 0;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+}
