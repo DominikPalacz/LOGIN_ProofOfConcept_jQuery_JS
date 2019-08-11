@@ -55,6 +55,7 @@ input {
 }
 
 .logo {
+  height: 80px;
 }
 
 .login-section {
@@ -64,8 +65,12 @@ input {
 }
 
 .login-section-form {
+  min-height: calc(50vh - 80px);
   padding: 30px 30px 0;
   background-image: linear-gradient(72deg, var(--top-left-gradient) 5%, var(--top-right-gradient) 95%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .form-container-top {
@@ -80,11 +85,17 @@ input {
 }
 
 .login-section-button {
+  min-height: 50vh;
   padding: 30px 30px 60px;
   background-image: linear-gradient(72deg, #00ac68 5%, #00c322 95%);
+  display: flex;
 }
 
 .form-container-bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .button-container {
@@ -139,9 +150,3 @@ input {
   color: white;
   font-size: 16px;
 }
-
-/* @media (orientation: landscape) {
-  * {
-    background-color: red;
-  }
-} */
