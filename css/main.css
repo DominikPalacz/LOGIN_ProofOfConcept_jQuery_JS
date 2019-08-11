@@ -43,6 +43,8 @@ input {
   --top-right-gradient: #099;
   --bottom-left-gradient: #00ac68;
   --bottom-right-gradient: #00c322;
+
+  --space: 30px;
 }
 
 .login {
@@ -51,7 +53,7 @@ input {
 }
 
 .logo-container {
-  padding: 0 30px;
+  padding: 0 var(--space);
 }
 
 .logo {
@@ -66,7 +68,7 @@ input {
 
 .login-section-form {
   min-height: calc(50vh - 80px);
-  padding: 30px 30px 0;
+  padding: var(--space) var(--space) 0;
   background-image: linear-gradient(72deg, var(--top-left-gradient) 5%, var(--top-right-gradient) 95%);
   display: flex;
   flex-direction: column;
@@ -80,13 +82,14 @@ input {
 }
 
 .login-title {
-  margin: 30px 0 30px;
+  max-width: 500px;
+  margin: var(--space) 0 var(--space);
   font-size: 32px;
 }
 
 .login-section-button {
   min-height: 50vh;
-  padding: 30px 30px 60px;
+  padding: var(--space) var(--space) 60px;
   background-image: linear-gradient(72deg, #00ac68 5%, #00c322 95%);
   display: flex;
 }
@@ -94,7 +97,7 @@ input {
 .form-container-bottom {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -116,7 +119,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: var(--space);
 }
 
 .button-text-box > p {
@@ -128,7 +131,7 @@ input {
   width: 100%;
   height: 50px;
   padding: 0 15px;
-  margin: 30px 0 0;
+  margin: var(--space) 0 0;
   background: none;
   color: white;
   border: 2px solid #fff;
@@ -149,4 +152,24 @@ input {
 :-moz-placeholder {
   color: white;
   font-size: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .logo-container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .login-section-form {
+    align-items: center;
+  }
+
+  .login-section-button {
+    justify-content: center;
+  }
+
+  .form-container-top,
+  .form-container-bottom {
+    width: 500px;
+  }
 }
